@@ -1,0 +1,30 @@
+# Loupe: an agent profile for Pointman (https://pointman.ai). `/spawn loupe --profile loupe` makes
+# @loupe from it, and `/spawn ux2 --profile loupe` another agent like it.
+
+[extension]
+id = "loupe"
+name = "Loupe"
+version = "0.1.0"
+publisher = "pointman-ai"
+summary = "A designer and UI/UX engineer with taste: designs screens from a brief, builds them, and reviews them."
+
+[agent]
+persona = "AGENT.md"
+clients = ["claude"]
+client = "claude"
+model = "opus"
+description = "Designer and apps lead. Designs with Open Design, builds the screens, reviews and ships others' work, with renders as evidence."
+avatar = "avatar.webp"
+skills = "skills"
+resident = true
+# folder: the default, ~/agents/{name}, unless the /spawn names one
+
+[agent.wakes]
+channels = ["#design"]
+
+[dependencies]
+opendesign = { version = ">=0.1,<1", why = "Makes the designs: a page and a still for each direction." }
+spacesheep = { version = ">=0.2", optional = true, why = "Publishes design docs and reviews as pages." }
+
+[permissions]
+rules = ["Bash(xcodebuild:*)", "Bash(swift test:*)"]
