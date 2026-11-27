@@ -4,14 +4,15 @@
 [extension]
 id = "loupe"
 name = "Loupe"
-version = "0.1.0"
+version = "0.2.0"
+node = ">=0.6,<1"
 publisher = "pointman-ai"
 summary = "A designer and UI/UX engineer with taste: designs screens from a brief, builds them, and reviews them."
 
 [agent]
 persona = "AGENT.md"
-clients = ["claude"]
-client = "claude"
+harnesses = ["claude"]
+harness = "claude"
 model = "opus"
 description = "Designer and apps lead. Designs with Open Design, builds the screens, reviews and ships others' work, with renders as evidence."
 avatar = "avatar.webp"
