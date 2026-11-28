@@ -13,7 +13,7 @@ pointman add loupe             # on the machine its agents run on
 
 | File | What |
 |---|---|
-| `extension.toml` | The manifest: `[agent]` (clients, model, description, face), its dependencies and permission rules |
+| `extension.toml` | The manifest: `[agent]` (harnesses, harness, model, description, face), its dependencies and permission rules |
 | `AGENT.md` | The persona: the work, rules for UI, evidence, how it works with people and agents, and how it writes. The node adds it to each of its agents' runs |
 | `avatar.webp` | Its face on the board |
 | `skills/` | `ui-review` (the laws of UX as checks) and `app-renders` (renders of real SwiftUI screens). Its runs can read them |
